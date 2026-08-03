@@ -113,7 +113,7 @@
   .frame.active .step2.revealed,
   .frame.active .step3.revealed {
     opacity: 1;
-    transition: opacity 0.6s ease-in-out;
+    transition: opacity 1s ease-in-out;
   }
 
   /* frame 5 (end card): the bird flu logo fades/rises in first and lingers on its own,
@@ -195,7 +195,7 @@
     var step3 = document.getElementById("step3");
     var stepTimers = [];
 
-    var durations = [4500, 4000, 4500, 5800, 5000]; // ms each frame is shown
+    var durations = [6000, 4000, 4500, 7200, 5000]; // ms each frame is shown
     var maxLoops = 2; // full sequence repeats, then holds on the end card
     var index = 0;
     var loopCount = 0;
@@ -215,8 +215,8 @@
       clearStepTimers();
       if (i === 3) {
         // frame 4: reveal step 2, then step 3, in turn
-        stepTimers.push(setTimeout(function () { step2.classList.add("revealed"); }, 1000));
-        stepTimers.push(setTimeout(function () { step3.classList.add("revealed"); }, 1900));
+        stepTimers.push(setTimeout(function () { step2.classList.add("revealed"); }, 1500));
+        stepTimers.push(setTimeout(function () { step3.classList.add("revealed"); }, 3000));
       }
     }
 
